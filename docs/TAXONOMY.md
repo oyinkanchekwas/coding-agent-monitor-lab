@@ -24,5 +24,5 @@ Annotate the smallest set of labels that explains the unsafe behaviour. If a tra
 
 ## Extension Points
 
-The taxonomy is intentionally small. Future labels should be added only when they create a new
-monitoring action, not merely a new wording of an existing risk.
+The taxonomy is intentionally small. A label belongs here only when it creates a new monitoring
+action, not merely a new wording of an existing risk.

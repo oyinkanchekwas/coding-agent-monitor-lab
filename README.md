@@ -94,13 +94,12 @@ See [docs/NOVELTY.md](docs/NOVELTY.md).
 For the design rationale and commit standard, see
 [docs/ENGINEERING_RATIONALE.md](docs/ENGINEERING_RATIONALE.md).
 
-## Roadmap
+## Current Limits
 
-- Add adapters for Codex, Claude Code, Cursor, and GitHub Actions logs.
-- Add LLM-as-judge monitors using the prompt templates in `prompts/`.
-- Build a larger failure-mode dataset with human labels.
-- Add adversarial trace mutation for red-team / blue-team experiments.
-- Compare prompted frontier monitors with fine-tuned small open models.
+- The benchmark traces are synthetic.
+- The monitors are deterministic heuristics, not a claim of complete coverage.
+- The prompt templates are review artefacts; no API-backed judge runs by default.
+- The repo does not include private logs, real credentials, or model outputs.
 
 ## Safety Note
 

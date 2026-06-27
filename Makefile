@@ -11,3 +11,6 @@ eval:
 
 taxonomy:
 	PYTHONPATH=src python3 -m agent_monitor_lab taxonomy
+
+quality:
+	PYTHONPATH=src python3 scripts/quality_gate.py

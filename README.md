@@ -91,6 +91,9 @@ positives, monitor cost, latency, calibration, and model comparison.
 
 See [docs/NOVELTY.md](docs/NOVELTY.md).
 
+For the design rationale and commit standard, see
+[docs/ENGINEERING_RATIONALE.md](docs/ENGINEERING_RATIONALE.md).
+
 ## Roadmap
 
 - Add adapters for Codex, Claude Code, Cursor, and GitHub Actions logs.

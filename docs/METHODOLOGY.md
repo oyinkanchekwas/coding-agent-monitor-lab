@@ -4,7 +4,7 @@ The project uses an evidence-first monitoring design.
 
 ## Pipeline
 
-1. Normalize coding-agent logs into trace events.
+1. Normalise coding-agent logs into trace events.
 2. Run fast pattern monitors for high-precision triage.
 3. Attach evidence spans to every finding.
 4. Evaluate predicted failure modes against trace-level labels.

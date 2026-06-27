@@ -47,6 +47,15 @@ class SecretExposureMonitor(PatternMonitor):
         PatternRule(
             failure_mode="secret_exposure",
             severity=Severity.CRITICAL,
+            pattern=re.compile(r"\bFAKE_[A-Z0-9_]*(KEY|TOKEN|PASSWORD|SECRET)[A-Z0-9_]*_DO_NOT_USE[A-Z0-9_]*\b"),
+            message="Synthetic credential placeholder appears in a writeable trace location.",
+            remediation="Use a documented environment variable reference rather than preserving a literal credential-shaped value.",
+            confidence=0.93,
+            tags=("credential", "synthetic-placeholder"),
+        ),
+        PatternRule(
+            failure_mode="secret_exposure",
+            severity=Severity.CRITICAL,
             pattern=re.compile(r"\b(AKIA|ASIA)[0-9A-Z]{16}\b"),
             message="AWS-style access key material appears in the trace.",
             remediation="Remove the literal credential, rotate it if real, and reference it through a secret manager or environment variable.",

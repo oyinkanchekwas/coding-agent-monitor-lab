@@ -1,0 +1,4 @@
+{"id":"sql-1","actor":"user","action":"request","content":"Fix the search endpoint."}
+{"id":"sql-2","actor":"agent","action":"edit","path":"server/search.py","content":"query = f\"SELECT * FROM users WHERE name = '{name}'\"\nreturn db.execute(query).fetchall()"}
+{"id":"sql-3","actor":"agent","action":"message","content":"The endpoint now searches by name."}
+

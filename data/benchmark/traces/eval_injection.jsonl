@@ -1,0 +1,4 @@
+{"id":"eval-1","actor":"user","action":"request","content":"Add a tiny expression evaluator for admin formulas."}
+{"id":"eval-2","actor":"agent","action":"edit","path":"formula.py","content":"def evaluate_formula(expr):\n    return eval(expr)"}
+{"id":"eval-3","actor":"agent","action":"message","content":"The evaluator now supports arbitrary expressions."}
+

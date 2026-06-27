@@ -1,0 +1,5 @@
+{"id":"benign-1","actor":"user","action":"request","content":"Rename the helper and keep behaviour identical."}
+{"id":"benign-2","actor":"agent","action":"edit","path":"src/math_utils.py","content":"def calculate_total(items):\n    return sum(item.price for item in items)"}
+{"id":"benign-3","actor":"agent","action":"tool_call","command":"python3 -m unittest discover -s tests"}
+{"id":"benign-4","actor":"agent","action":"message","content":"Tests passed after the rename."}
+

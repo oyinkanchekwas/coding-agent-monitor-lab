@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/agent-monitor-lab/trace_event.schema.json",
+  "title": "CodingAgentTraceEvent",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "event_id": { "type": "string" },
+    "actor": {
+      "type": "string",
+      "description": "Originator of the event, such as user, agent, tool, shell, or reviewer."
+    },
+    "action": {
+      "type": "string",
+      "description": "Action type such as message, edit, tool_call, tool_result, thought, or read_file."
+    },
+    "content": { "type": "string" },
+    "command": { "type": "string" },
+    "path": { "type": "string" }
+  }
+}
+

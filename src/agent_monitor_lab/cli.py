@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 from agent_monitor_lab.evaluator import evaluate_paths
-from agent_monitor_lab.pipeline import MonitorPipeline, summarize_scans
+from agent_monitor_lab.pipeline import MonitorPipeline, summarise_scans
 from agent_monitor_lab.taxonomy import taxonomy_as_dict
 
 
@@ -51,7 +51,7 @@ def _scan(args: argparse.Namespace) -> int:
     pipeline = MonitorPipeline()
     scans = pipeline.scan_paths(args.paths)
     report = {
-        "summary": summarize_scans(scans),
+        "summary": summarise_scans(scans),
         "traces": [scan.to_dict() for scan in scans],
     }
     _emit_json(report, args.out, pretty=args.pretty)
@@ -81,4 +81,3 @@ def _emit_json(payload: object, out: Path | None, *, pretty: bool) -> None:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

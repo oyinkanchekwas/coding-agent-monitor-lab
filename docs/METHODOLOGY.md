@@ -27,9 +27,8 @@ The goal is to make monitor progress measurable.
 
 ## Design Assumptions
 
-- Coding-agent traces are mixed-trust artifacts. User prompts, issue bodies, repository files,
+- Coding-agent traces are mixed-trust artefacts. User prompts, issue bodies, repository files,
   tool output, and web content can all contain malicious or misleading instructions.
 - Monitoring output must be auditable. A finding without an evidence span is not actionable.
 - Hierarchical monitoring is useful because cheap first-pass filters can route only suspicious
   events to slower review.
-

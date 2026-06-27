@@ -16,7 +16,7 @@ class Severity(str, Enum):
 
 @dataclass(frozen=True)
 class TraceEvent:
-    """One normalized event from a coding-agent trace."""
+    """One normalised event from a coding-agent trace."""
 
     event_id: str
     source: str
@@ -94,4 +94,3 @@ class TraceScan:
             "finding_count": len(self.findings),
             "findings": [finding.to_dict() for finding in self.findings],
         }
-

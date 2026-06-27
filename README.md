@@ -9,12 +9,12 @@ AI safety research, coding agents, and empirical LLM evaluation.
 ## Why This Exists
 
 Coding agents do more than produce final diffs. They read untrusted files, execute shell commands,
-install dependencies, edit tests, summarize failures, and decide what to tell the user. A useful
-monitor should therefore inspect the full trace of agent behavior, not only the final code.
+install dependencies, edit tests, summarise failures, and decide what to tell the user. A useful
+monitor should therefore inspect the full trace of agent behaviour, not only the final code.
 
 This repo implements a small but complete monitor loop:
 
-- normalize agent traces,
+- normalise agent traces,
 - detect failure modes,
 - attach evidence spans,
 - evaluate monitor predictions against labels,
@@ -102,4 +102,4 @@ See [docs/NOVELTY.md](docs/NOVELTY.md).
 ## Safety Note
 
 The benchmark traces are synthetic. Secrets, domains, and keys in `data/benchmark/` are fake and
-only exist to test monitor behavior.
+only exist to test monitor behaviour.

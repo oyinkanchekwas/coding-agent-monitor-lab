@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Iterable
 
 from agent_monitor_lab.models import TraceScan
-from agent_monitor_lab.pipeline import MonitorPipeline, summarize_scans
+from agent_monitor_lab.pipeline import MonitorPipeline, summarise_scans
 from agent_monitor_lab.taxonomy import FAILURE_MODES
 
 
@@ -76,7 +76,7 @@ def evaluate_scans(scans: Iterable[TraceScan], labelled: Iterable[LabelledTrace]
         "fn": sum(row["fn"] for row in per_mode.values()),
     }
     return {
-        "summary": summarize_scans(scans),
+        "summary": summarise_scans(scans),
         "micro": _metric_row(micro_counts),
         "per_mode": metrics,
         "cases": cases,

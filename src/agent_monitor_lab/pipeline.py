@@ -35,7 +35,7 @@ def default_pipeline() -> MonitorPipeline:
     return MonitorPipeline()
 
 
-def summarize_scans(scans: Iterable[TraceScan]) -> dict[str, object]:
+def summarise_scans(scans: Iterable[TraceScan]) -> dict[str, object]:
     scans = tuple(scans)
     findings = [finding for scan in scans for finding in scan.findings]
     by_mode: dict[str, int] = {}
@@ -76,4 +76,3 @@ def _severity_sort_key(severity: Severity) -> int:
 def _ordered_severity_counts(counts: dict[str, int]) -> dict[str, int]:
     order = ["critical", "high", "medium", "low", "info"]
     return {severity: counts[severity] for severity in order if severity in counts}
-

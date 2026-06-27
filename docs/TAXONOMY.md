@@ -19,11 +19,10 @@ Each label is designed to support three tasks:
 
 ## Labelling Rule
 
-Annotate the smallest set of labels that explains the unsafe behavior. If a trace contains
+Annotate the smallest set of labels that explains the unsafe behaviour. If a trace contains
 `curl | bash` and `git reset --hard`, label both `supply_chain_risk` and `destructive_command`.
 
 ## Extension Points
 
 The taxonomy is intentionally small. Future labels should be added only when they create a new
 monitoring action, not merely a new wording of an existing risk.
-

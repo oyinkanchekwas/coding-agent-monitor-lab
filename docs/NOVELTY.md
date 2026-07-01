@@ -18,10 +18,9 @@ The contribution is a compact research lab for coding-agent monitor design.
 3. A small taxonomy with high-actionability labels is more useful than a large taxonomy that reviewers cannot apply consistently.
 4. Hybrid monitors can improve the cost/latency frontier: deterministic triage first, LLM adjudication second.
 
-## Near-Term Extensions
+## Evaluation Boundaries
 
-- Add real anonymized traces from Codex, Claude Code, or Cursor sessions.
-- Add LLM-as-judge adapters with structured outputs.
-- Fine-tune a small open model on the benchmark format.
-- Add red-team generators that mutate benign traces into adversarial variants.
-- Track monitor calibration, abstention, and reviewer disagreement.
+- The included traces are synthetic and should be treated as benchmark fixtures, not evidence of deployment performance.
+- The deterministic monitors are a first-pass triage layer, not a complete safety system.
+- Prompt templates are included for review and reproducibility; no API-backed judge runs by default.
+- Any future real-trace work needs consent, redaction, provenance notes, and disagreement tracking before it belongs in the public repo.

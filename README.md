@@ -25,7 +25,7 @@ This repo implements a small but complete monitor loop:
 No third-party dependencies are required.
 
 ```bash
-git clone https://github.com/<your-username>/coding-agent-monitor-lab.git
+git clone https://github.com/oyinkanchekwas/coding-agent-monitor-lab.git
 cd coding-agent-monitor-lab
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 PYTHONPATH=src python3 -m agent_monitor_lab scan data/benchmark/traces --pretty

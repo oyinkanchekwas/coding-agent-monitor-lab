@@ -3,8 +3,7 @@
 Evidence-first monitoring experiments for AI coding-agent traces.
 
 This project is a public research-engineering lab for detecting safety, security, and integrity
-failures in coding-agent workflows. It is built for roles at the intersection of AI engineering,
-AI safety research, coding agents, and empirical LLM evaluation.
+failures in coding-agent workflows.
 
 ## Why This Exists
 
@@ -76,20 +75,18 @@ src/agent_monitor_lab/   parser, monitors, pipeline, evaluator, CLI
 data/benchmark/          synthetic labelled coding-agent traces
 prompts/                 LLM-as-judge monitor prompt templates
 schemas/                 JSON schemas for traces and findings
-docs/                    taxonomy, methodology, novelty positioning
+docs/                    taxonomy, methodology, technical scope
 tests/                   standard-library unit tests
 ```
 
-## Novelty
+## Technical Scope
 
-The repo's angle is evidence-first hierarchical monitoring for coding-agent traces.
-
-Most simple demos either scan source code or ask an LLM to judge a transcript. This project starts
-from a monitor-friendly data contract: every finding must identify a failure mode, severity,
+Most simple demos either scan source code or ask an LLM to judge a transcript. This project uses
+a monitor-friendly data contract: every finding must identify a failure mode, severity,
 confidence, evidence span, and remediation. That makes it suitable for later experiments on false
 positives, monitor cost, latency, calibration, and model comparison.
 
-See [docs/NOVELTY.md](docs/NOVELTY.md).
+See [docs/TECHNICAL_SCOPE.md](docs/TECHNICAL_SCOPE.md).
 
 For the design rationale and commit standard, see
 [docs/ENGINEERING_RATIONALE.md](docs/ENGINEERING_RATIONALE.md).
@@ -97,7 +94,7 @@ For the design rationale and commit standard, see
 ## Current Limits
 
 - The benchmark traces are synthetic.
-- The monitors are deterministic heuristics, not a claim of complete coverage.
+- The monitors are deterministic heuristics, so coverage should be checked against the benchmark labels.
 - The prompt templates are review artefacts; no API-backed judge runs by default.
 - The repo does not include private logs, real credentials, or model outputs.
 

@@ -1,6 +1,6 @@
 # Engineering Rationale
 
-This repo is meant to show judgement, not commit volume.
+This repo is meant to keep monitor decisions inspectable.
 
 ## Why the first release is small
 
@@ -22,16 +22,16 @@ A monitor that only says "unsafe" is not very useful to an engineer. The finding
 an evidence span and remediation so a reviewer can inspect the exact event and decide whether to
 block, warn, or ignore.
 
-## Why examples use fake placeholders
+## Why fixture tokens are clearly fake
 
 The benchmark needs secret-exposure examples, but public repositories should not contain realistic
-provider-token strings. Synthetic examples therefore use explicit `FAKE_*_DO_NOT_USE` placeholders.
+provider-token strings. Synthetic examples therefore use explicit `FAKE_*_DO_NOT_USE` fixture values.
 The monitor still contains patterns for real credential shapes because users may scan their own
 private traces locally, but the public benchmark avoids realistic secret material.
 
 ## Commit Standard
 
-For this repo, future commits should explain the design reason, not only the file diff.
+For this repo, commit messages should explain the design reason, not only the file diff.
 
 Good commit shape:
 
@@ -43,4 +43,3 @@ strings in public data.
 
 Verification: unit tests and benchmark evaluation passed.
 ```
-

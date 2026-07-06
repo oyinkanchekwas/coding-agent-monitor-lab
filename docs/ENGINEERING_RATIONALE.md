@@ -1,20 +1,19 @@
 # Engineering Rationale
 
-This repo is meant to keep monitor decisions inspectable.
+This repo keeps monitor decisions inspectable.
 
 ## Why the first release is small
 
-The first release deliberately covers a compact monitor loop: parse traces, run deterministic
-monitors, attach evidence, and evaluate against labelled examples. I chose that shape because it
-keeps the failure path inspectable. A larger system with agents calling agents would look more
-impressive, but it would make the core claim harder to check.
+The first release covers a compact monitor loop: parse traces, run deterministic monitors, attach
+evidence, and evaluate against labelled examples. Keeping the loop small makes the failure path
+easy to inspect and the benchmark claims easy to check.
 
 ## Why deterministic monitors come before LLM monitors
 
 The project is about coding-agent monitoring, not about hiding every decision inside another model.
 Deterministic monitors give a baseline that is cheap, reproducible, and easy to audit. The prompt
-templates are included so LLM-as-judge experiments can be added later against a stable output
-contract.
+templates use the same output contract, so LLM-as-judge experiments can be compared with the
+deterministic baseline.
 
 ## Why every finding needs evidence
 

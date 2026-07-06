@@ -24,5 +24,5 @@ workflows.
 - The included traces are synthetic and should be treated as benchmark fixtures, not evidence of deployment performance.
 - The deterministic monitors are a first-pass triage layer, not a complete safety system.
 - Prompt templates are included for review and reproducibility; no API-backed judge runs by default.
-- Real-trace datasets need consent, redaction, provenance notes, and disagreement tracking before
-  they belong in a public repo.
+- Real-trace datasets are outside this release unless consent, redaction, provenance notes, and
+  disagreement tracking are handled first.

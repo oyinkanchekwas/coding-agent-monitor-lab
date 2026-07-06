@@ -11,7 +11,7 @@ The project uses an evidence-first monitoring design.
 5. Use prompt templates for slower LLM adjudication where deterministic evidence is ambiguous.
 
 The current repo ships deterministic monitors so the benchmark can run without API keys.
-The prompt templates in `prompts/` define the interface for adding LLM-as-judge monitors later.
+The prompt templates in `prompts/` provide the same output contract for LLM-as-judge review.
 
 ## Metrics
 
@@ -23,12 +23,11 @@ The evaluator reports:
 - finding counts and severity counts.
 
 This is deliberately closer to an empirical research harness than a product demo.
-The goal is to make monitor progress measurable.
+The metrics make monitor changes measurable.
 
 ## Design Assumptions
 
 - Coding-agent traces are mixed-trust artefacts. User prompts, issue bodies, repository files,
   tool output, and web content can all contain malicious or misleading instructions.
 - Monitoring output must be auditable. A finding without an evidence span is not actionable.
-- Hierarchical monitoring is useful because cheap first-pass filters can route only suspicious
-  events to slower review.
+- Hierarchical monitoring keeps slower review focused on suspicious events.

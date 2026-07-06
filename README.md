@@ -83,8 +83,8 @@ tests/                   standard-library unit tests
 
 Most simple demos either scan source code or ask an LLM to judge a transcript. This project uses
 a monitor-friendly data contract: every finding must identify a failure mode, severity,
-confidence, evidence span, and remediation. That makes it suitable for later experiments on false
-positives, monitor cost, latency, calibration, and model comparison.
+confidence, evidence span, and remediation. The same output contract supports comparisons across
+false positives, monitor cost, latency, calibration, and model choice.
 
 See [docs/TECHNICAL_SCOPE.md](docs/TECHNICAL_SCOPE.md).
 
